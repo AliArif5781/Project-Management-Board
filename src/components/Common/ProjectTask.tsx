@@ -100,7 +100,10 @@ const ProjectTask: React.FC = () => {
     <div className="px-4 py-9 h-[100%] bg-gradient-to-r from-[#E9E9E9] to-[#F6F6F6] mx-4 rounded-lg shadow-md">
       <h1 className="text-2xl sm:text-3xl font-bold mb-6">Project Tasks</h1>
       <span className="text-black-100 text-sm font-light">
-        Write your current task about your <strong>{savedProjectTitle}</strong>{" "}
+        Write your current task about your{" "}
+        <strong className=" capitalize font-semibold">
+          {savedProjectTitle}
+        </strong>{" "}
         project.
       </span>
       {/* Task Input Section */}
@@ -155,13 +158,12 @@ const ProjectTask: React.FC = () => {
       </div>
 
       {/* Task List */}
-      {/* Task List */}
       <div className="mt-6">
         {tasks.length > 0
           ? tasks.map((task) => (
               <div
                 key={task.id}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 p-4 mb-3 bg-[#F9FAFB] rounded-lg shadow-md border border-gray-200 items-center"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 p-4 mb-3 px-5bg-[#F9FAFB] rounded-lg shadow-md border border-gray-200 items-center"
               >
                 {/* Task Name */}
                 <div className="col-span-1 sm:col-span-2 lg:col-span-6">
