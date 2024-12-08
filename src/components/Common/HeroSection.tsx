@@ -21,17 +21,16 @@ const HeroSection = () => {
     (state: RootState) => state.text.TextDescription
   );
 
-  useEffect(() => {
-    const savedTitle = localStorage.getItem("projectTitle");
-    const savedDescription = localStorage.getItem("projectDescription");
-
-    if (savedTitle) {
-      dispatch(setTitleValue(savedTitle));
-    }
-    if (savedDescription) {
-      dispatch(setTitleDescription(savedDescription));
-    }
-  }, [dispatch]);
+  // useEffect(() => {
+  // const savedTitle = localStorage.getItem("projectTitle");
+  // const savedDescription = localStorage.getItem("projectDescription");
+  // if (savedTitle) {
+  //   dispatch(setTitleValue(savedTitle));
+  // }
+  // if (savedDescription) {
+  //   dispatch(setTitleDescription(savedDescription));
+  // }
+  // }, [dispatch]);
 
   const handleToggle = () => {
     dispatch(setDialog(true));
